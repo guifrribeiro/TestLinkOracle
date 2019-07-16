@@ -13,22 +13,27 @@ namespace TestLink
             InitializeComponent();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tstBtn_Click(object sender, EventArgs e)
         {
-            var connectionStringBuilder = new Devart.Data.Oracle.OracleConnectionStringBuilder();
-            connectionStringBuilder.Direct = true;
-
-            connectionStringBuilder.ServiceName = txtBx_serviceName.Text;
-            connectionStringBuilder.Sid = txtBx_sid.Text;
-            connectionStringBuilder.Server = txtBx_server.Text;
-            connectionStringBuilder.Port = Int32.Parse(txtBx_port.Text);
-            connectionStringBuilder.UserId = txtBx_user.Text;
-            connectionStringBuilder.Password = txtBx_pass.Text;
-
             tstBtn.Enabled = false;
 
             if (rdBtn_devart.Checked)
             {
+                var connectionStringBuilder = new Devart.Data.Oracle.OracleConnectionStringBuilder();
+
+                connectionStringBuilder.Direct = true;
+                connectionStringBuilder.ServiceName = txtBx_serviceName.Text;
+                connectionStringBuilder.Sid = txtBx_sid.Text;
+                connectionStringBuilder.Server = txtBx_server.Text;
+                connectionStringBuilder.Port = Int32.Parse(txtBx_port.Text);
+                connectionStringBuilder.UserId = txtBx_user.Text;
+                connectionStringBuilder.Password = txtBx_pass.Text;
+
                 var connection = new Devart.Data.Oracle.OracleConnection(connectionStringBuilder.ConnectionString);
                 if (connection != null)
                 {
@@ -52,7 +57,14 @@ namespace TestLink
             }
             else if (rdBtn_native.Checked)
             {
-                var connectionOracleClient = new OracleConnection($@"User Id={connectionStringBuilder.UserId};Password={connectionStringBuilder.Password};Data Source={connectionStringBuilder.Sid};");
+                var connectionStringBuilder = new OracleConnectionStringBuilder();
+
+                connectionStringBuilder.DataSource = txtBx_sid.Text;
+                connectionStringBuilder.UserID = txtBx_user.Text;
+                connectionStringBuilder.Password = txtBx_pass.Text;
+
+                var connectionOracleClient = new OracleConnection(connectionStringBuilder.ConnectionString);
+
                 if (connectionOracleClient != null)
                 {
                     for (int i = 0; i <= Int32.Parse(txtBx_qtd.Text); i++)
