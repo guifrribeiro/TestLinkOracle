@@ -1,0 +1,13 @@
+D:\git-projects\MyUtils\TestLink\TestLink\bin\Debug\TestLink.exe.config
+D:\git-projects\MyUtils\TestLink\TestLink\bin\Debug\TestLink.exe
+D:\git-projects\MyUtils\TestLink\TestLink\bin\Debug\TestLink.pdb
+D:\git-projects\MyUtils\TestLink\TestLink\bin\Debug\Devart.Data.dll
+D:\git-projects\MyUtils\TestLink\TestLink\bin\Debug\Devart.Data.Oracle.dll
+D:\git-projects\MyUtils\TestLink\TestLink\obj\Debug\TestLink.csprojAssemblyReference.cache
+D:\git-projects\MyUtils\TestLink\TestLink\obj\Debug\TestLink.Form1.resources
+D:\git-projects\MyUtils\TestLink\TestLink\obj\Debug\TestLink.Properties.Resources.resources
+D:\git-projects\MyUtils\TestLink\TestLink\obj\Debug\TestLink.csproj.GenerateResource.cache
+D:\git-projects\MyUtils\TestLink\TestLink\obj\Debug\TestLink.csproj.CoreCompileInputs.cache
+D:\git-projects\MyUtils\TestLink\TestLink\obj\Debug\TestLink.csproj.CopyComplete
+D:\git-projects\MyUtils\TestLink\TestLink\obj\Debug\TestLink.exe
+D:\git-projects\MyUtils\TestLink\TestLink\obj\Debug\TestLink.pdb
